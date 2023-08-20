@@ -1,8 +1,9 @@
-function transformDegree(degree) {
+const transformDegree = (degree) => {
     const celsiusExists = degree.toUpperCase().includes('C');
     const fahrenheitExists = degree.toUpperCase().includes('F');
 
     if(!celsiusExists && !fahrenheitExists) {
+        alert('Tipo de Grau inválido. Informe o sinal de C ou F após os graus.');
         throw new Error('Tipo de Grau inválido. Informe o sinal de C ou F.');
     }
 
@@ -17,12 +18,19 @@ function transformDegree(degree) {
         degreeSign = 'F';
     }
 
-
-    return formula(updatedDegree).toFixed(2) + degreeSign;
+    return showTemp(formula(updatedDegree).toFixed(2) + degreeSign);
 }
 
-try {
-    console.log(transformDegree('28c'));
-} catch(error) {
-    console.log(`${error}`);
+const showTemp = (fn) => {
+    return document.getElementById("mainOutput").innerHTML = fn;
 }
+
+const degree = document.getElementById("temp").value;
+const button = document.getElementById("calcBtn");
+
+// try {
+//     // button.addEventListener("click", getValueDegree);
+// } catch(error) {
+//     alert(`${error}`);
+// }
+

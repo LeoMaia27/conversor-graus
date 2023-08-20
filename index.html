@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Graus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>Conversor de Graus</h1>
+            <p>Insira uma temperatura em Graus Celsius ou Farenheight</p>
+        </header>
+
+        <main class="mainContent">
+
+            <div class="action">
+                <label for="temp">Conversor</label>
+                <input type="text" id="temp" placeholder="Temperatura em C ou F">
+                <div class="out">
+                    <button id="calcBtn" onclick="transformDegree(degree)">Calcular</button>
+                    <output id="mainOutput"></output>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
