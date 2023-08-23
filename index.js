@@ -1,4 +1,5 @@
 const transformDegree = (degree) => {
+    degree = document.getElementById("temp").value;
     const celsiusExists = degree.toUpperCase().includes('C');
     const fahrenheitExists = degree.toUpperCase().includes('F');
 
@@ -25,8 +26,8 @@ const showTemp = (fn) => {
     return document.getElementById("mainOutput").innerHTML = fn;
 }
 
-const degree = document.getElementById("temp").value;
-const button = document.getElementById("calcBtn");
+const degree = document.getElementById("temp");
+const button = document.getElementById("calcBtn").onclick = transformDegree;
 
 // try {
 //     // button.addEventListener("click", getValueDegree);
