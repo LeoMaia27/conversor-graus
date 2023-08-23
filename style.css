@@ -110,3 +110,9 @@ label[for=temp] {
         gap: 1rem;
     }
 }
+
+@media screen and (max-height: 42.75rem) {
+    .container {
+        height: 90vh;
+    }
+}
